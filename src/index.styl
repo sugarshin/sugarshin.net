@@ -1,0 +1,54 @@
+@charset "utf-8"
+@import "sanitize"
+
+html, :root
+  font-size 62.5%
+html, :root, body
+  background-color #fafafa
+  height 100%
+body
+  color #323b43
+  font-size 1.4rem
+  font-family "Helvetica Neue", "Helvetica", "Roboto", "游ゴシック体", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", "Noto Sans Japanese", sans-serif;
+
+.wrapper
+  flex-direction column
+  height 100%
+  display flex
+  justify-content center
+  align-items center
+  @media screen and (min-width: 768px)
+    flex-direction row
+.image
+  width 56.25%
+  margin 0 0 4%
+  @media screen and (min-width: 768px)
+    width 24%
+    margin 0 2%
+    order 2
+  img
+    max-width 100%
+    height auto
+.text
+  width 56.25%
+  @media screen and (min-width: 768px)
+    width 24%
+    margin 0 2%
+    order 1
+  .octicon
+    margin-right .4em
+  .profile
+    margin-bottom 8%
+    @media screen and (min-width: 768px)
+      margin-bottom 16%
+  ul
+    list-style none
+    padding 0
+    margin 0
+    a
+      color #168eea
+      text-decoration none
+      &:hover
+        text-decoration underline
+    @media screen and (min-width: 768px)
+      text-align right

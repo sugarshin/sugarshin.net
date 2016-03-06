@@ -1,0 +1,5 @@
+# sugarshin.net
+
+## License
+
+© sugarshin

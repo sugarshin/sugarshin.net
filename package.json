@@ -9,9 +9,9 @@
     "stylus": "stylus -u ./node_modules/poststylus --with \"[require('${PWD}/node_modules/autoprefixer')({ browsers: ['last 3 versions'] }), require('${PWD}/node_modules/css-mqpacker'), require('${PWD}/node_modules/postcss-flexbugs-fixes')]\" -I node_modules/sanitize.css/lib -o build src/index.styl",
     "watch": "npm run jade -- -w & npm run stylus -- -w",
     "cp:CNAME": "cp CNAME build/CNAME",
-    "cp:favicon": "cp src/favicon.ico build/favicon.ico",
+    "cp:favicon": "cp favicon.ico build/favicon.ico",
     "cp": "npm run cp:CNAME && npm run cp:favicon",
-    "compile": "npm run jade && npm run stylus -- -c",
+    "compile": "NODE_ENV=production npm run jade && npm run stylus -- -c",
     "test": "echo \"Error: no test specified.\"",
     "build": "npm run clean; mkdir build; npm run compile; npm run cp",
     "deploy": "gh-pages -x -d build --repo https://$GITHUB_TOKEN@github.com/sugarshin/sugarshin.net.git"

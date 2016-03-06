@@ -30,7 +30,7 @@
     "live-server": "^0.9.2",
     "postcss-flexbugs-fixes": "^2.0.0",
     "poststylus": "^0.2.3",
-    "stylus": "^0.53.0"
+    "stylus": "^0.54.0"
   },
   "dependencies": {
     "sanitize.css": "^3.3.0"

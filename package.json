@@ -4,16 +4,16 @@
   "private": true,
   "scripts": {
     "clean": "if [ -d build ]; then rm -rf build; fi",
-    "start": "npm run clean; mkdir build; npm run jade; npm run stylus; npm run watch & live-server --wait=1000 build",
-    "jade": "jade -o build src/index.jade",
+    "start": "npm run clean; mkdir build; npm run pug; npm run stylus; npm run watch & live-server --wait=1000 build",
+    "pug": "pug -o build src/index.pug",
     "stylus": "stylus -u ./node_modules/poststylus --with \"[require('${PWD}/node_modules/autoprefixer')({ browsers: ['last 3 versions'] }), require('${PWD}/node_modules/css-mqpacker'), require('${PWD}/node_modules/postcss-flexbugs-fixes')]\" -I node_modules/sanitize.css/lib -o build src/index.styl",
-    "watch": "npm run jade -- -w & npm run stylus -- -w",
-    "cp:CNAME": "cp CNAME build/CNAME",
+    "watch": "npm run pug -- -w & npm run stylus -- -w",
+    "cname": "echo sugarshin.net > build/CNAME",
     "cp:favicon": "cp favicon.ico build/favicon.ico",
-    "cp": "npm run cp:CNAME && npm run cp:favicon",
-    "compile": "NODE_ENV=production npm run jade && npm run stylus -- -c",
+    "cp": "npm run cp:favicon",
+    "compile": "NODE_ENV=production npm run pug && npm run stylus -- -c",
     "test": "echo \"Error: no test specified.\"",
-    "build": "npm run clean; mkdir build; npm run compile; npm run cp",
+    "build": "npm run clean; mkdir build; npm run compile; npm run cp; npm run cname",
     "deploy": "gh-pages -x -d build --repo https://$GITHUB_TOKEN@github.com/sugarshin/sugarshin.net.git"
   },
   "repository": {
@@ -23,14 +23,14 @@
   "author": "sugarshin",
   "license": "sugarshin all rights reserved.",
   "devDependencies": {
-    "autoprefixer": "^6.3.3",
-    "css-mqpacker": "^4.0.0",
+    "autoprefixer": "^6.3.6",
+    "css-mqpacker": "^5.0.1",
     "gh-pages": "^0.11.0",
-    "jade": "^1.11.0",
-    "live-server": "^0.9.2",
+    "live-server": "^1.0.0",
     "postcss-flexbugs-fixes": "^2.0.0",
     "poststylus": "^0.2.3",
-    "stylus": "^0.54.0"
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5"
   },
   "dependencies": {
     "sanitize.css": "^3.3.0"

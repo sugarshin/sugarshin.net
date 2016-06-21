@@ -1,21 +1,21 @@
 sudo: false
 language: node_js
 node_js:
-- '4'
+  - '6'
 branches:
   only:
-  - master
+    - master
 cache:
   directories:
-  - node_modules
+    - node_modules
 before_install:
-- npm update -g npm
+  - npm update -g npm
 script:
-- npm run build
+  - npm run build
 after_success:
-- git config --global user.email "gh-pages@localhost"
-- git config --global user.name "Travis"
-- npm run deploy
+  - git config --global user.email "gh-pages@localhost"
+  - git config --global user.name "Travis"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && npm run deploy
 env:
   global:
     secure: yRDa3H2ON0zbo2b4ZJZIIFM9+emZfPOrDP7s12eaXaTtulDvxa925+sP+D8Rlhp/xhxBMOh9jSXvr/hoDp4/ULkq2DvEmPcXokHLTj30TqPJHHjQxPAmUeGPVW7GCTgFobik+v1/xxyYBgYfa/3GzDgPFkrbGFIP/Gp6IP00Z6c=

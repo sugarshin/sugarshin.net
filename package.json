@@ -4,16 +4,19 @@
   "private": true,
   "scripts": {
     "clean": "if [ -d build ]; then rm -rf build; fi",
-    "start": "npm run clean; mkdir build; npm run pug; npm run stylus; npm run watch & live-server --wait=1000 build",
+    "start": "npm run clean; mkdir build; npm run watch & live-server --no-browser --wait=600 build",
     "pug": "pug -o build src/index.pug",
     "stylus": "stylus -u ./node_modules/poststylus --with \"[require('${PWD}/node_modules/autoprefixer')({ browsers: ['last 3 versions'] }), require('${PWD}/node_modules/css-mqpacker'), require('${PWD}/node_modules/postcss-flexbugs-fixes'), require('${PWD}/node_modules/postcss-import')()]\" -I node_modules/sanitize.css -o build src/index.styl",
-    "watch": "npm run pug -- -w & npm run stylus -- -w",
+    "watch:styl": "npm run stylus -- -w",
+    "watch:pug": "npm run pug -- -wP",
+    "watch": "npm run watch:pug & npm run watch:styl",
     "cname": "echo sugarshin.net > build/CNAME",
     "cp:favicon": "cp favicon.ico build/favicon.ico",
     "cp": "npm run cp:favicon",
-    "compile": "NODE_ENV=production npm run pug && npm run stylus -- -c",
+    "build:css": "npm run stylus; cssnano build/index.css build/index.css",
+    "build:src": "NODE_ENV=production npm run pug && npm run build:css",
     "test": "echo \"Error: no test specified.\"",
-    "build": "npm run clean; mkdir build; npm run compile; npm run cp; npm run cname",
+    "build": "npm run clean; mkdir build; npm run build:src; npm run cp; npm run cname",
     "deploy": "gh-pages -x -d build --repo https://$GITHUB_TOKEN@github.com/sugarshin/sugarshin.net.git"
   },
   "repository": {
@@ -25,6 +28,7 @@
   "devDependencies": {
     "autoprefixer": "~6.3.6",
     "css-mqpacker": "~5.0.1",
+    "cssnano-cli": "~1.0.4",
     "gh-pages": "~0.11.0",
     "live-server": "~1.0.0",
     "postcss-flexbugs-fixes": "~2.0.0",

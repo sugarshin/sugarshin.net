@@ -1,6 +1,7 @@
 const fs = require('fs');
 const favicons = require('favicons');
 const toIco = require('to-ico');
+const chalk = require('chalk');
 
 const source = './src/portrait.png';
 const outDir = 'build';
@@ -25,8 +26,9 @@ favicons(source, Object.assign({}, favicons.config, configuration), (err, res) =
   const iconBuffers = res.images.filter(({ name }) => name === target).map(({ name, contents }) => contents);
   toIco(iconBuffers)
     .then(buf => {
-      fs.writeFileSync(`./${outDir}/favicon.ico`, buf);
-      console.log('Success create favicon !');
+      const path = `${outDir}/favicon.ico`;
+      fs.writeFileSync(path, buf);
+      console.log(`  ${chalk.bgGreen(' generate ')} ${chalk.gray(path)}`);
     })
     .catch(err => { throw new Error(err); });
 });

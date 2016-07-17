@@ -23,8 +23,8 @@ const target = 'favicon-32x32.png';
 
 favicons(source, Object.assign({}, favicons.config, configuration), (err, res) => {
   if (err) throw new Error(err);
-  const iconBuffers = res.images.filter(({ name }) => name === target).map(({ name, contents }) => contents);
-  toIco(iconBuffers)
+  const buffers = res.images.filter(({ name }) => name === target).map(i => i.contents);
+  toIco(buffers)
     .then(buf => {
       const path = `${outDir}/favicon.ico`;
       fs.writeFileSync(path, buf);

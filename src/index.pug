@@ -18,32 +18,30 @@ html
       .image: img(src="portrait.png")
       .text
         ul.profile
-          li
-            span.icon-container: span.octicon.octicon-terminal
-            | Engineer
-          li
-            span.icon-container: span.octicon.octicon-organization
-            a(href="//one-team.com/") Oneteam Inc.
-          li
-            span.icon-container: span.octicon.octicon-location
-            | Tokyo, Japan
+          -
+            const info = [
+              { icon: 'terminal', text: 'Engineer' },
+              { icon: 'organization', text: '<a href="//one-team.com/">Oneteam Inc.</a>' },
+              { icon: 'location', text: 'Tokyo, Japan' },
+            ];
+          each val in info
+            li
+              span.icon-container: span.octicon(class=`octicon-${val.icon}`)
+              | !{val.text}
         ul.links.log
           li: a(href="//log.sugarshin.net/")
             span.icon-container: span.octicon.octicon-pencil
             | log
         ul.links
-          li: a(href="//github.com/sugarshin/")
-            span.icon-container: span.octicon.octicon-link
-            | GitHub
-          li: a(href="//www.npmjs.com/~sugarshin")
-            span.icon-container: span.octicon.octicon-link
-            | npm
-          li: a(href="//keybase.io/sugarshin")
-            span.icon-container: span.octicon.octicon-link
-            | Keybase
-          li: a(href="//twitter.com/sugarshin")
-            span.icon-container: span.octicon.octicon-link
-            | Twitter
-          li: a(href="//instagram.com/sugarshin")
-            span.icon-container: span.octicon.octicon-link
-            | Instagram
+          -
+            const links = [
+              { url: '//github.com/sugarshin/', text: 'GitHub' },
+              { url: '//www.npmjs.com/~sugarshin', text: 'npm' },
+              { url: '//keybase.io/sugarshin', text: 'Keybase' },
+              { url: '//twitter.com/sugarshin/', text: 'Twitter' },
+              { url: '//instagram.com/sugarshin', text: 'Instagram'},
+            ];
+          each val in links
+            li: a(href= val.url)
+              span.icon-container: span.octicon.octicon-link
+              | #{val.text}

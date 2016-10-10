@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--  ______  __  __  ______  ______  ______  ______  __  __  __  __   __-->
+<!-- /\  ___\/\ \/\ \/\  ___\/\  __ \/\  == \/\  ___\/\ \_\ \/\ \/\ "-.\ \-->
+<!-- \ \___  \ \ \_\ \ \ \__ \ \  __ \ \  __<\ \___  \ \  __ \ \ \ \ \-.  \-->
+<!--  \/\_____\ \_____\ \_____\ \_\ \_\ \_\ \_\/\_____\ \_\ \_\ \_\ \_\\"\_\-->
+<!--   \/_____/\/_____/\/_____/\/_/\/_/\/_/ /_/\/_____/\/_/\/_/\/_/\/_/ \/_/-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>sugarshin.net</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="image"><img src="portrait.png"></div>
+      <div class="text">
+        <ul class="profile">
+          <li><span class="icon-container"><span class="octicon octicon-terminal"></span></span>Engineer</li>
+          <li><span class="icon-container"><span class="octicon octicon-organization"></span></span><a href="//one-team.com/">Oneteam Inc.</a></li>
+          <li><span class="icon-container"><span class="octicon octicon-location"></span></span>Tokyo, Japan</li>
+        </ul>
+        <ul class="links log">
+          <li><a href="//log.sugarshin.net/"><span class="icon-container"><span class="octicon octicon-pencil"></span></span>log</a></li>
+        </ul>
+        <ul class="links">
+          <li><a href="//github.com/sugarshin/"><span class="icon-container"><span class="octicon octicon-link"></span></span>GitHub</a></li>
+          <li><a href="//www.npmjs.com/~sugarshin"><span class="icon-container"><span class="octicon octicon-link"></span></span>npm</a></li>
+          <li><a href="//keybase.io/sugarshin"><span class="icon-container"><span class="octicon octicon-link"></span></span>Keybase</a></li>
+          <li><a href="//twitter.com/sugarshin/"><span class="icon-container"><span class="octicon octicon-link"></span></span>Twitter</a></li>
+          <li><a href="//instagram.com/sugarshin"><span class="icon-container"><span class="octicon octicon-link"></span></span>Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

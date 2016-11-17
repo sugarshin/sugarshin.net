@@ -33,7 +33,7 @@
     "css-mqpacker": "^5.0.1",
     "cssnano-cli": "^1.0.5",
     "favicons": "^4.8.3",
-    "gh-pages": "~0.11.0",
+    "gh-pages": "~0.12.0",
     "imagemin": "^5.2.2",
     "imagemin-pngquant": "^5.0.0",
     "live-server": "^1.1.0",

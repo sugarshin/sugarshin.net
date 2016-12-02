@@ -4,15 +4,15 @@ import pug from 'pug';
 import stylus from 'stylus';
 
 test('Render html correctly', t => {
-  const spec = fs.readFileSync('./fixtures/html', { encoding: 'utf8' });
-  const actual = pug.renderFile('../src/index.pug', { pretty: true });
+  const spec = fs.readFileSync('./test/fixtures/html', { encoding: 'utf8' });
+  const actual = pug.renderFile('./src/index.pug', { pretty: true });
   t.is(spec, actual);
 });
 
 test('Build css correctly', async t => {
   const poststylus = require('poststylus');
-  const spec = fs.readFileSync('./fixtures/css', { encoding: 'utf8' });
-  const src = fs.readFileSync('../src/index.styl', { encoding: 'utf8' });
+  const spec = fs.readFileSync('./test/fixtures/css', { encoding: 'utf8' });
+  const src = fs.readFileSync('./src/index.styl', { encoding: 'utf8' });
   const actual = new Promise((resolve, reject) => {
     stylus(src)
     .use(poststylus([

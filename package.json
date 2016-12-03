@@ -3,8 +3,8 @@
   "description": "sugarshin.net",
   "private": true,
   "scripts": {
-    "clean": "if [ -d build ]; then rm -rf build; fi",
-    "start": "npm run clean; mkdir -p build; npm run cp:dev; npm run watch & live-server --no-browser --wait=600 build",
+    "clean:build": "if [ -d build ]; then rm -rf build; fi",
+    "start": "npm run clean:build; mkdir -p build; npm run cp:dev; npm run watch & live-server --no-browser --wait=600 build",
     "pug": "pug -o build src/index.pug",
     "stylus": "stylus -u ./node_modules/poststylus --with \"[require('${PWD}/node_modules/autoprefixer')({ browsers: ['last 3 versions'] }), require('${PWD}/node_modules/css-mqpacker'), require('${PWD}/node_modules/postcss-flexbugs-fixes'), require('${PWD}/node_modules/postcss-import')()]\" -o build src/index.styl",
     "watch:styl": "npm run stylus -- -w",
@@ -15,16 +15,14 @@
     "favicon": "node scripts/favicon",
     "build:css": "npm run stylus; cssnano build/index.css build/index.css",
     "build:image": "node scripts/imagemin",
-    "build:src": "NODE_ENV=production npm run pug && npm run build:css && npm run build:image",
+    "build:src": "npm run pug && npm run build:css && npm run build:image",
     "test": "ava",
-    "build": "npm run clean; mkdir -p build; npm run build:src; npm run favicon; npm run cname",
-    "deploy": "gh-pages -x -d build --repo https://$GITHUB_TOKEN@github.com/sugarshin/sugarshin.net.git"
+    "build": "npm run clean:build; mkdir -p build; npm run build:src; npm run favicon; npm run cname",
+    "ghpages": "gh-pages -x -m 'Update [ci skip]' -d build -r https://github.com/sugarshin/sugarshin.net.git",
+    "deploy": "NODE_ENV=production npm run build && npm run ghpages"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sugarshin/sugarshin.net.git"
-  },
-  "author": "sugarshin",
+  "repository": "git@github.com:sugarshin/sugarshin.net.git",
+  "author": "sugarshin <shinsugar@gmail.com>",
   "license": "sugarshin all rights reserved.",
   "dependencies": {
     "autoprefixer": "^6.5.3",

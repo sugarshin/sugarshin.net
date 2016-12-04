@@ -9,7 +9,7 @@
     "stylus": "stylus -u ./node_modules/poststylus --with \"[require('${PWD}/node_modules/autoprefixer')({ browsers: ['last 3 versions'] }), require('${PWD}/node_modules/css-mqpacker'), require('${PWD}/node_modules/postcss-flexbugs-fixes'), require('${PWD}/node_modules/postcss-import')()]\" -o build src/index.styl",
     "watch:styl": "npm run stylus -- -w",
     "watch:pug": "npm run pug -- -wP",
-    "watch": "npm run watch:pug & npm run watch:styl",
+    "watch": "NODE_ENV=development npm run watch:pug & npm run watch:styl",
     "cname": "echo sugarshin.net > build/CNAME",
     "cp:dev": "cp src/portrait.png build",
     "favicon": "node scripts/favicon",
@@ -19,7 +19,7 @@
     "test": "ava",
     "build": "npm run clean:build; mkdir -p build; npm run build:src; npm run favicon; npm run cname",
     "ghpages": "gh-pages -x -m 'Update [ci skip]' -d build -r https://github.com/sugarshin/sugarshin.net.git",
-    "deploy": "NODE_ENV=production npm run build && npm run ghpages"
+    "deploy": "npm run build && npm run ghpages"
   },
   "repository": "git@github.com:sugarshin/sugarshin.net.git",
   "author": "sugarshin <shinsugar@gmail.com>",

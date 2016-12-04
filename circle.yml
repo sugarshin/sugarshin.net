@@ -8,7 +8,7 @@ dependencies:
   pre:
     - yarn --version
   override:
-    - yarn install
+    - yarn
   cache_directories:
     - "~/.cache/yarn"
 deployment:
@@ -17,4 +17,4 @@ deployment:
     commands:
       - git config --global user.name "CircleCI"
       - git config --global user.email "s+circleci@sugarshin.net"
-      - npm run deploy
+      - NODE_ENV=production npm run deploy

@@ -11,7 +11,6 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     if process.env.NODE_ENV === 'production'
       link(rel="shortcut icon" href="favicon.ico")
-    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css")
     link(rel="stylesheet" href="index.css")
   body
     .wrapper
@@ -23,14 +22,14 @@ html
               { icon: 'terminal', text: 'Engineer' },
               { icon: 'organization', text: '<a href="//one-team.com/">Oneteam Inc.</a>' },
               { icon: 'location', text: 'Tokyo, Japan' },
-            ];
+            ]
           each val in info
             li
-              span.icon-container: span.octicon(class=`octicon-${val.icon}`)
+              span.icon-container: !=octicons[val.icon].toSVG()
               | !{val.text}
         ul.links.log
           li: a(href="//log.sugarshin.net/")
-            span.icon-container: span.octicon.octicon-pencil
+            span.icon-container: !=octicons.pencil.toSVG()
             | log
         ul.links
           -
@@ -40,8 +39,8 @@ html
               { url: '//keybase.io/sugarshin', text: 'Keybase' },
               { url: '//twitter.com/sugarshin/', text: 'Twitter' },
               { url: '//instagram.com/sugarshin', text: 'Instagram'},
-            ];
+            ]
           each val in links
             li: a(href= val.url)
-              span.icon-container: span.octicon.octicon-link
+              span.icon-container: !=octicons.link.toSVG()
               | #{val.text}

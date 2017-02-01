@@ -1,0 +1,63 @@
+@charset "utf-8"
+@import "sanitize.css"
+
+html, :root
+  font-size: 62.5%
+html, :root, body
+  background-color: #fafafa
+  height: 100%
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", "Noto Sans Japanese", sans-serif
+body
+  color: #323b43
+  line-height: 1.6
+  font-size: 1.4rem
+
+.wrapper
+  flex-direction: column
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  @media screen and (min-width: 768px)
+    flex-direction: row
+.image
+  width: 56.25%
+  margin: 0 0 4%
+  @media screen and (min-width: 768px)
+    flex-basis: 24%
+    width: auto
+    margin: 0 2%
+    order: 2
+  img
+    max-width: 100%
+    height: auto
+.text
+  width: 56.25%
+  @media screen and (min-width: 768px)
+    flex-basis: 24%
+    width: auto
+    order: 1
+  .icon-container
+    margin-right: .4em
+    display: inline-block
+    width: 16px
+    text-align: center
+    vertical-align: middle
+    line-height: 1
+  .profile
+    margin-bottom: 8%
+    @media screen and (min-width: 768px)
+      margin-bottom: 16%
+  .links.log
+    margin-bottom: 4%
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+    a
+      color: #168eea
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+    @media screen and (min-width: 768px)
+      text-align: right

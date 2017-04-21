@@ -3,7 +3,7 @@ const favicons = require('favicons')
 const toIco = require('to-ico')
 const chalk = require('chalk')
 
-const source = './src/portrait.png'
+const source = './src/images/portrait.png'
 const outDir = 'build'
 const configuration = {
   icons: {
@@ -11,10 +11,8 @@ const configuration = {
     appleIcon: false,
     appleStartup: false,
     coast: false,
-    favicons: true,
+    favicons: true, // just only this
     firefox: false,
-    opengraph: false,
-    twitter: false,
     windows: false,
     yandex: false,
   },

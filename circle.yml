@@ -1,7 +1,10 @@
 machine:
   timezone: Asia/Tokyo
   node:
-    version: 6.9.1
+    version: 6.10.3
+  pre:
+    - git config --global user.name "CircleCI"
+    - git config --global user.email "s+circleci@sugarshin.net"
   post:
     - curl -o- -L https://yarnpkg.com/install.sh | bash
 dependencies:
@@ -10,11 +13,16 @@ dependencies:
   override:
     - yarn
   cache_directories:
-    - "~/.cache/yarn"
+    - ~/.cache/yarn
+test:
+  override:
+    - npm run lint
+    - npm test
 deployment:
   master:
     branch: master
     commands:
-      - git config --global user.name "CircleCI"
-      - git config --global user.email "s+circleci@sugarshin.net"
-      - NODE_ENV=production npm run deploy
+      - NODE_ENV=production npm run build
+      - node scripts/favicon
+      - echo sugarshin.net > build/CNAME
+      - /bin/bash scripts/deploy.sh

@@ -1,4 +1,6 @@
-# sugarshin.net [![Circle CI][circleci-image]][circleci-url] [![Dependency Status][david-image]][david-url]
+# sugarshin.net
+
+[![CircleCI][circleci-image]][circleci-url] [![Dependency Status][david-image]][david-url]
 
 https://sugarshin.net
 
@@ -8,9 +10,15 @@ https://sugarshin.net
 yarn
 ```
 
+## Development
+
+```sh
+yarn start
+```
+
 ## Deploy
 
-Merge to master branch will trigger Travis CI that deploys assets to GitHub Pages.
+Merge to master branch will trigger CircleCI that deploys assets to GitHub Pages.
 
 © sugarshin
 

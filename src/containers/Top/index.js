@@ -24,11 +24,11 @@ const Top = () => {
           </ListItem>)}
         </List>
         <List className={s['links-log']}>
-          <ListItem href='//log.sugarshin.net/'>
+          <ListItem href='//blog.sugarshin.net/'>
             <span className={s['icon-container']}>
               <Octicon name='pencil' />
             </span>
-            <span>log</span>
+            <span>Blog</span>
           </ListItem>
         </List>
         <List>

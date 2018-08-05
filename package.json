@@ -11,7 +11,7 @@
     "test": "NODE_ENV=test ava",
     "lint": "eslint .",
     "prebuild": "npm run clean:build",
-    "build": "webpack --config webpack.config.prod --progress"
+    "build": "webpack --config webpack.config.prod"
   },
   "repository": "git@github.com:sugarshin/sugarshin.net.git",
   "author": "sugarshin <shinsugar@gmail.com>",

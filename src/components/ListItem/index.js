@@ -10,6 +10,7 @@ const ListItem = ({ children, className, href, target, ...props }) => {
 }
 
 ListItem.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   href: PropTypes.string,
   target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),

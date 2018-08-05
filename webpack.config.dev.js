@@ -99,6 +99,11 @@ module.exports = {
         loader: 'url-loader',
         options: { name: '[name].[ext]', limit: 10000 },
       },
+      // Markdown for Page
+      {
+        test: /.*\/pages\/.+\.md$/,
+        loader: 'raw-loader',
+      },
     ],
   },
 }

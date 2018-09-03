@@ -13,8 +13,8 @@ const Top = () => {
       <div className={s.text}>
         <List className={s.profile}>
           {[
-            { icon: 'terminal', text: 'Engineer' },
-            { icon: 'organization', text: 'Oneteam Inc.', url: '//one-team.com/' },
+            { icon: 'terminal', text: 'Software Engineer' },
+            { icon: 'organization', text: 'Mercari, Inc.' },
             { icon: 'location', text: 'Tokyo, Japan' },
           ].map(d => <ListItem key={d.icon} href={d.url || null}>
             <span className={s['icon-container']}>
@@ -33,11 +33,11 @@ const Top = () => {
         </List>
         <List>
           {[
-            { url: '//github.com/sugarshin/', text: 'GitHub' },
-            { url: '//www.npmjs.com/~sugarshin', text: 'npm' },
-            { url: '//keybase.io/sugarshin', text: 'Keybase' },
-            { url: '//twitter.com/sugarshin/', text: 'Twitter' },
-            { url: '//instagram.com/sugarshin', text: 'Instagram'},
+            { url: 'https://github.com/sugarshin/', text: 'GitHub' },
+            { url: 'https://www.npmjs.com/~sugarshin', text: 'npm' },
+            { url: 'https://keybase.io/sugarshin', text: 'Keybase' },
+            { url: 'https://twitter.com/sugarshin/', text: 'Twitter' },
+            { url: 'https://instagram.com/sugarshin', text: 'Instagram'},
           ].map(d => <ListItem key={d.text} href={d.url}>
             <span className={s['icon-container']}>
               <Octicon name='link' />

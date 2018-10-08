@@ -4,6 +4,14 @@
 
 https://sugarshin.net
 
+## Node.js
+
+8.12.0
+
+```sh
+cat .node-version
+```
+
 ## Dependencies
 
 ```sh

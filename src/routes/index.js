@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, IndexRoute } from 'react-router'
+import { Route, IndexRoute, Redirect } from 'react-router'
 import Top from './Top'
 import ReMapPrivacy from './ReMapPrivacy'
 import Notfound from './Notfound'
@@ -10,7 +10,11 @@ const App = props => props.children
 const routes = (
   <Route path='/' component={App}>
     <IndexRoute component={Top} />
-    <Route path='remap-privacy' component={ReMapPrivacy} />
+    <Route path='remap'>
+      <IndexRoute component={Notfound} />
+      <Route path='privacy' component={ReMapPrivacy} />
+    </Route>
+    <Redirect to='/remap/privacy' from='remap-privacy' />
     <Route path='*' component={Notfound} />
   </Route>
 )

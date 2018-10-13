@@ -39,7 +39,9 @@ module.exports = {
       screw_ie8: true,
       compressor: { warnings: false },
     }),
-    new ManifestPlugin(),
+    new ManifestPlugin({
+      basePath: '/',
+    }),
     new ReactStaticPlugin({
       routes: './src/routes/index.js',
       template: './Template.js',

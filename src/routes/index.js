@@ -10,7 +10,7 @@ const App = props => props.children
 const routes = (
   <Route path='/' component={App}>
     <IndexRoute component={Top} />
-    <Route path='remap-privacy' component={ReMapPrivacy} />
+    <Route path='remap-privacy/' component={ReMapPrivacy} />
     <Route path='*' component={Notfound} />
   </Route>
 )

@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "clean:build": "if [ -d build ]; then rm -rf build; fi",
-    "prestart": "npm run clean:build",
-    "start": "npm run dev-server",
+    "predev": "npm run clean:build",
+    "dev": "npm run dev-server",
     "dev-server": "NODE_ENV=development babel-node server",
     "test": "NODE_ENV=test ava",
     "lint": "eslint .",

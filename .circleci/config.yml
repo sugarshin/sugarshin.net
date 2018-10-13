@@ -42,6 +42,7 @@ jobs:
     steps:
       - checkout
       - restore_cache: *restore_yarn_cache
+      - run: *configure_git
       - run:
           name: Deploy
           command: |

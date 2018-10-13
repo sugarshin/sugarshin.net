@@ -1,7 +1,7 @@
 machine:
   timezone: Asia/Tokyo
   node:
-    version: 8.11.3
+    version: 8.12.0
   pre:
     - git config --global user.name "CircleCI"
     - git config --global user.email "s+circleci@sugarshin.net"
@@ -23,6 +23,6 @@ deployment:
     branch: master
     commands:
       - NODE_ENV=production npm run build
-      - node scripts/favicon
+      - node_modules/.bin/ts-node scripts/favicon.ts
       - echo sugarshin.net > build/CNAME
       - /bin/bash scripts/deploy.sh

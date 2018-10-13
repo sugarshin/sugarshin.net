@@ -19,7 +19,7 @@ app.use(require('webpack-hot-middleware')(compiler))
 
 app.get('*', (req, res) => {
   const html = renderDocumentToString({
-    manifest: { 'app.js': config.output.publicPath + 'app.js' },
+    manifest: { '/app.js': config.output.publicPath + 'app.js' },
   })
   res.send(html)
 })

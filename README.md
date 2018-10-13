@@ -13,7 +13,7 @@ yarn
 ## Development
 
 ```sh
-yarn start
+yarn run dev
 ```
 
 ## Deploy

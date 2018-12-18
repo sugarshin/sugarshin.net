@@ -2,6 +2,7 @@ import React from 'react'
 import List from 'components/List'
 import ListItem from 'components/ListItem'
 import Octicon from 'components/Octicon'
+import Bio from 'components/Bio'
 import s from './index.sss'
 
 const Top = () => {
@@ -11,10 +12,10 @@ const Top = () => {
         <img src={require('images/portrait.png')} />
       </div>
       <div className={s.text}>
+        <Bio className={s.bio} />
         <List className={s.profile}>
           {[
             { icon: 'terminal', text: 'Software Engineer' },
-            { icon: 'organization', text: 'Mercari, Inc.' },
             { icon: 'location', text: 'Tokyo, Japan' },
           ].map(d => <ListItem key={d.icon} href={d.url || null}>
             <span className={s['icon-container']}>

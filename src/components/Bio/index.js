@@ -10,7 +10,7 @@ const Bio = ({ className, ...props }) => {
         <span>Shingo Sato</span>
         <span className={s.name}>@sugarshin</span>
       </h1>
-      <div className={s.descr}>Software Developer and Co-Founder at <a href='https://ins0.jp/'>instance0, inc.</a> Software Developer at <a href='https://about.mercari.com/en/'>Mercari, Inc.</a></div>
+      <div className={s.descr}><span className={s.nowrap}>Software Developer</span> and <span className={s.nowrap}>Co-Founder</span> at <a href='https://ins0.jp/' className={s.nowrap}>instance0, inc.</a> <span className={s.nowrap}>Software Developer</span> at <a href='https://merpay.com/' className={s.nowrap}>Merpay, Inc.</a> , <a href='https://about.mercari.com/en/' className={s.nowrap}>Mercari, Inc.</a></div>
     </div>
   )
 }

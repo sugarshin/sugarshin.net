@@ -3,7 +3,7 @@ version: 2
 references:
   defaults: &defaults
     docker:
-      - image: circleci/node:10.14.2
+      - image: circleci/node:10.15.0
     working_directory: ~/sugarshin.net
   configure_git: &configure_git
     name: Configure Git
@@ -13,10 +13,10 @@ references:
   restore_yarn_cache: &restore_yarn_cache
     name: Restoring Cache - yarn
     keys:
-      - comuque-frontend-yarn-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-      - comuque-frontend-yarn-v1-{{ .Branch }}-
+      - yarn-v1-{{ checksum "yarn.lock" }}
+      - yarn-v1-
   save_yarn_cache: &save_yarn_cache
-    key: comuque-frontend-yarn-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+    key: yarn-v1-{{ checksum "yarn.lock" }}
     paths:
       - ~/.cache/yarn
       - ./node_modules

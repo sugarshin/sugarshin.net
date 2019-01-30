@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const ReactStaticPlugin = require('react-static-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const settings = require('./settings')
 
 module.exports = {
   context: __dirname,
@@ -46,6 +47,7 @@ module.exports = {
       routes: './src/routes/index.js',
       template: './Template.js',
       favicon: 'favicon.ico',
+      title: settings.title,
     }),
   ],
 

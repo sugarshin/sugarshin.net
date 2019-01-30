@@ -28,6 +28,7 @@ const Template = ({
 
 Template.propTypes = {
   title: T.string,
+  description: T.string,
   body: T.string,
   favicon: T.string,
   lang: T.string,

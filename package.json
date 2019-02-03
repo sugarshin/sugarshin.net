@@ -4,11 +4,12 @@
   "description": "sugarshin.net",
   "private": true,
   "scripts": {
+    "clean:.nuxt": "if [ -d .nuxt ]; then rm -rf .nuxt; fi",
     "clean:build": "if [ -d build ]; then rm -rf build; fi",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "pregenerate": "npm run clean:build",
+    "pregenerate": "npm run clean:.nuxt && npm run clean:build",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",

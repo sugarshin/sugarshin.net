@@ -52,7 +52,6 @@ jobs:
       - persist_to_workspace:
           root: ~/sugarshin.net
           paths:
-            - .nuxt
             - build
       - store_artifacts:
           path: .nuxt
@@ -66,7 +65,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ~/sugarshin.net/build
+          at: ~/sugarshin.net
       - run: *configure_git
       - run:
           name: Deploy

@@ -10,7 +10,7 @@ DIR=.deploy
 rm -rf $DIR
 git clone --depth=1 $GIT_URL -b $BRANCH $DIR || (git init $DIR && cd $DIR && git remote add origin $GIT_URL && git checkout -b $BRANCH)
 rm -rf ${DIR}/*
-cp -R ${DIR}/../${BUILD}/* $DIR
+cp -R ${DIR}/../${BUILD}/. $DIR
 cd $DIR
 git add --all
 git commit -m "Built artifacts of $COMMIT [ci skip]" || true

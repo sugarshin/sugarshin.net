@@ -19,7 +19,7 @@
   "author": "Shingo Sato <shinsugar@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "nuxt": "2.4.2",
+    "nuxt": "2.6.3",
     "octicons": "8.3.0",
     "sanitize.css": "6.0.0"
   },

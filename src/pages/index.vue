@@ -53,10 +53,10 @@ export default Vue.extend({
       ],
       links: [
         { id: 0, url: 'https://github.com/sugarshin/', text: 'GitHub' },
-        { id: 1, url: 'https://www.npmjs.com/~sugarshin', text: 'npm' },
-        { id: 2, url: 'https://keybase.io/sugarshin', text: 'Keybase' },
-        { id: 3, url: 'https://twitter.com/sugarshin/', text: 'Twitter' },
-        { id: 4, url: 'https://instagram.com/sugarshin', text: 'Instagram' }
+        { id: 1, url: 'https://keybase.io/sugarshin', text: 'Keybase' },
+        { id: 2, url: 'https://twitter.com/sugarshin/', text: 'Twitter' },
+        { id: 3, url: 'https://instagram.com/sugarshin', text: 'Instagram' },
+        { id: 4, url: 'https://www.facebook.com/sngsato', text: 'Facebook' }
       ]
     }
   }

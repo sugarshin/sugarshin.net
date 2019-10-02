@@ -1,0 +1,67 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test_build_deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.16.0'
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm test
+      - name: Build
+        run: npm run generate
+        env:
+          NODE_ENV: production
+      - uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build
+      - uses: actions/upload-artifact@v1
+        with:
+          name: .nuxt
+          path: .nuxt
+      - uses: actions/download-artifact@v1
+        if: github.ref == 'master'
+        with:
+          name: build
+      - uses: actions/download-artifact@v1
+        if: github.ref == 'master'
+        with:
+          name: .nuxt
+      - name: Setup Deploy Key
+        if: github.ref == 'master'
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          mkdir /root/.ssh
+          ssh-keyscan -t rsa github.com > /root/.ssh/known_hosts
+          echo "${DEPLOY_KEY}" > /root/.ssh/id_rsa
+          chmod 400 /root/.ssh/id_rsa
+      - name: Deploy
+        if: github.ref == 'master'
+        env:
+          GIT_URL: git@github.com:sugarshin/sugarshin.net.git
+          BRANCH: gh-pages
+          GITHUB_SHA: ${{ github.sha }}
+          BUILD: build
+          DIR: .deploy
+        run: |
+          git config --global user.name 'CircleCI'
+          git config --global user.email 's+circleci@sugarshin.net'
+          rm -rf $DIR
+          git clone --depth=1 $GIT_URL -b $BRANCH $DIR || (git init $DIR && cd $DIR && git remote add origin $GIT_URL && git checkout -b $BRANCH)
+          rm -rf ${DIR}/*
+          cp -R ${DIR}/../${BUILD}/. $DIR
+          cd $DIR
+          git add --all
+          git commit -m "Built artifacts of ${GITHUB_SHA} [ci skip]" || echo "No changes detected, skipping deployment"; exit 0
+          git push origin $BRANCH
+          echo "${GITHUB_SHA} was successfully deployed"

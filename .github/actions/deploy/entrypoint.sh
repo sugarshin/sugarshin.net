@@ -17,6 +17,6 @@ rm -rf "${DIR:?}/*"
 cp -R "${GITHUB_WORKSPACE}/${BUILD}/." "${DIR}"
 cd "${DIR}"
 git add --all
-git commit -m "Built artifacts of ${GITHUB_SHA} [ci skip]" || echo "No changes detected, skipping deployment"; exit 0
+git commit -m "Built artifacts of ${GITHUB_SHA} [ci skip]" || (echo "No changes detected, skipping deployment"; exit 0)
 git push origin "${BRANCH}"
 echo "${GITHUB_SHA} was successfully deployed"

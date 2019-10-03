@@ -22,10 +22,6 @@
         Software Developer
       </span>
       at
-      <a href="https://merpay.com/" class="Container__Nowrap">
-        Merpay
-      </a>
-      /
       <a href="https://about.mercari.com/en/" class="Container__Nowrap">
         Mercari, Inc.
       </a>

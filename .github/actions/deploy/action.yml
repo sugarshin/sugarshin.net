@@ -1,0 +1,5 @@
+name: 'Deploy'
+description: 'Deploy Assets to GitHub Pages'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

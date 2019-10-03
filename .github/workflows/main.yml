@@ -1,9 +1,9 @@
-name: CI
+name: CI/CD
 
 on: [push]
 
 jobs:
-  test_build_deploy:
+  test:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
@@ -16,6 +16,15 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm test
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.16.0'
+      - name: Install dependencies
+        run: npm install
       - name: Build
         run: npm run generate
         env:
@@ -28,16 +37,26 @@ jobs:
         with:
           name: .nuxt
           path: .nuxt
+  deploy:
+    runs-on: ubuntu-18.04
+    needs: [test, build]
+    steps:
+      - uses: actions/checkout@v1
+        if: contains(github.ref, 'master')
+      - name: Install dependencies
+        if: contains(github.ref, 'master')
+        run: |
+          apk add --no-cache \
+            bash \
+            git \
+            openssh-client \
+            ca-certificates
       - uses: actions/download-artifact@v1
-        if: github.ref == 'master'
+        if: contains(github.ref, 'master')
         with:
           name: build
-      - uses: actions/download-artifact@v1
-        if: github.ref == 'master'
-        with:
-          name: .nuxt
       - name: Setup Deploy Key
-        if: github.ref == 'master'
+        if: contains(github.ref, 'master')
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
@@ -46,7 +65,7 @@ jobs:
           echo "${DEPLOY_KEY}" > /root/.ssh/id_rsa
           chmod 400 /root/.ssh/id_rsa
       - name: Deploy
-        if: github.ref == 'master'
+        if: contains(github.ref, 'master')
         env:
           GIT_URL: git@github.com:sugarshin/sugarshin.net.git
           BRANCH: gh-pages

@@ -6,7 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 1
       - uses: actions/setup-node@v1
@@ -21,7 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 1
       - uses: actions/setup-node@v1
@@ -33,11 +33,11 @@ jobs:
         run: npm run generate
         env:
           NODE_ENV: production
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: build
           path: build
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: .nuxt
           path: .nuxt
@@ -45,16 +45,17 @@ jobs:
     runs-on: ubuntu-18.04
     needs: [test, build]
     steps:
-      - uses: actions/checkout@v1
-        if: contains(github.ref, 'master')
+      - uses: actions/checkout@v2
+        if: github.ref == 'refs/heads/master'
         with:
           fetch-depth: 1
-      - uses: actions/download-artifact@v1
-        if: contains(github.ref, 'master')
+      - uses: actions/download-artifact@v2
+        if: github.ref == 'refs/heads/master'
         with:
           name: build
+          path: build
       - uses: ./.github/actions/deploy
-        if: contains(github.ref, 'master')
+        if: github.ref == 'refs/heads/master'
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           GIT_URL: git@github.com:sugarshin/sugarshin.net.git

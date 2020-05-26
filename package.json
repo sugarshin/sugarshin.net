@@ -43,7 +43,7 @@
     "eslint-plugin-vue": "6.2.2",
     "jest": "26.0.1",
     "nodemon": "2.0.4",
-    "prettier": "1.19.1",
+    "prettier": "2.0.5",
     "stylus": "0.54.7",
     "stylus-loader": "3.0.2",
     "terser": "4.7.0",

@@ -5,16 +5,16 @@ module.exports = {
   mode: 'universal',
   generate: {
     dir: 'build',
-    fallback: '404.html'
+    fallback: '404.html',
   },
   head: {
     title: settings.title,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: settings.description }
+      { hid: 'description', name: 'description', content: settings.description },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   loading: { color: '#323b43' },
   css: ['~/assets/css/lib.css', '~/assets/css/app.styl'],
@@ -27,9 +27,9 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
-    }
-  }
+    },
+  },
 }

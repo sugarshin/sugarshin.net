@@ -11,13 +11,13 @@ export default Vue.extend({
   props: {
     name: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     iconSvg() {
       return octicons[this.name].toSVG()
-    }
-  }
+    },
+  },
 })
 </script>

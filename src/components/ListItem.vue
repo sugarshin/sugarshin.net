@@ -14,14 +14,14 @@ export default Vue.extend({
   props: {
     href: {
       type: String,
-      default: null
+      default: null,
     },
     target: {
       type: String,
       validator: val => ['_self', '_blank', '_parent', '_top'].includes(val),
-      default: '_self'
-    }
-  }
+      default: '_self',
+    },
+  },
 })
 </script>
 

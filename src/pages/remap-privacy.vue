@@ -11,13 +11,13 @@ import markdown from '~/assets/md/remap-privacy.md'
 
 export default Vue.extend({
   components: {
-    Markdown
+    Markdown,
   },
   data() {
     return {
-      markdown
+      markdown,
     }
-  }
+  },
 })
 </script>
 

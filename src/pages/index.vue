@@ -57,6 +57,7 @@ export default Vue.extend({
         { url: 'https://twitter.com/sugarshin/', text: 'Twitter' },
         { url: 'https://instagram.com/sugarshin', text: 'Instagram' },
         { url: 'https://www.facebook.com/sngsato', text: 'Facebook' },
+        { url: 'https://www.strava.com/athletes/sugarshin', text: 'Strava' },
       ],
     }
   },

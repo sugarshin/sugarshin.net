@@ -1,20 +1,28 @@
 module.exports = {
   root: true,
+  ignorePatterns: [
+    '.nuxt',
+    'build',
+  ],
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   extends: [
+    'eslint:recommended',
     '@nuxtjs',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/vue',
   ],
   plugins: [
-    'prettier'
+    'prettier',
   ],
   rules: {
-    'vue/html-self-closing': 'off'
-  }
+    'prettier/prettier': 'error',
+    'vue/html-self-closing': 'off',
+  },
 }

@@ -10,13 +10,13 @@ export default Vue.extend({
   props: {
     markdown: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     html() {
       return this.markdown
-    }
-  }
+    },
+  },
 })
 </script>

@@ -43,23 +43,23 @@ export default Vue.extend({
   components: {
     Octicon,
     Bio,
-    ListItem
+    ListItem,
   },
   data() {
     return {
       informations: [
         { id: 0, icon: 'terminal', text: 'Software Engineer' },
-        { id: 1, icon: 'location', text: 'Tokyo, Japan' }
+        { id: 1, icon: 'location', text: 'Tokyo, Japan' },
       ],
       links: [
         { id: 0, url: 'https://github.com/sugarshin/', text: 'GitHub' },
         { id: 1, url: 'https://keybase.io/sugarshin', text: 'Keybase' },
         { id: 2, url: 'https://twitter.com/sugarshin/', text: 'Twitter' },
         { id: 3, url: 'https://instagram.com/sugarshin', text: 'Instagram' },
-        { id: 4, url: 'https://www.facebook.com/sngsato', text: 'Facebook' }
-      ]
+        { id: 4, url: 'https://www.facebook.com/sngsato', text: 'Facebook' },
+      ],
     }
-  }
+  },
 })
 </script>
 

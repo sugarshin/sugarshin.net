@@ -13,14 +13,14 @@ import Octicon from '~/components/Octicon'
 export default Vue.extend({
   layout: 'default',
   components: {
-    Octicon
+    Octicon,
   },
   props: {
     error: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 })
 </script>
 

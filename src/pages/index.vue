@@ -6,7 +6,7 @@
     <div class="TopPage__Text">
       <Bio class="TopPage__Text__Bio" />
       <ul class="TopPage__Text__List TopPage__Text__Profile">
-        <li is="ListItem" v-for="info in informations" :key="info.id" class="TopPage__Text__Profile__Item">
+        <li is="ListItem" v-for="(info, i) in informations" :key="i" class="TopPage__Text__Profile__Item">
           <span class="TopPage__Text__Profile__ListItem__IconContainer">
             <Octicon :name="info.icon" />
           </span>
@@ -22,7 +22,7 @@
         </li>
       </ul>
       <ul class="TopPage__Text__List">
-        <li is="ListItem" v-for="link in links" :key="link.id" class="TopPage__Text__Profile__Item" :href="link.url">
+        <li is="ListItem" v-for="(link, i) in links" :key="i" class="TopPage__Text__Profile__Item" :href="link.url">
           <span class="TopPage__Text__Profile__ListItem__IconContainer">
             <Octicon name="link" />
           </span>
@@ -48,15 +48,15 @@ export default Vue.extend({
   data() {
     return {
       informations: [
-        { id: 0, icon: 'terminal', text: 'Software Engineer' },
-        { id: 1, icon: 'location', text: 'Tokyo, Japan' },
+        { icon: 'terminal', text: 'Software Engineer' },
+        { icon: 'location', text: 'Tokyo, Japan' },
       ],
       links: [
-        { id: 0, url: 'https://github.com/sugarshin/', text: 'GitHub' },
-        { id: 1, url: 'https://keybase.io/sugarshin', text: 'Keybase' },
-        { id: 2, url: 'https://twitter.com/sugarshin/', text: 'Twitter' },
-        { id: 3, url: 'https://instagram.com/sugarshin', text: 'Instagram' },
-        { id: 4, url: 'https://www.facebook.com/sngsato', text: 'Facebook' },
+        { url: 'https://github.com/sugarshin/', text: 'GitHub' },
+        { url: 'https://keybase.io/sugarshin', text: 'Keybase' },
+        { url: 'https://twitter.com/sugarshin/', text: 'Twitter' },
+        { url: 'https://instagram.com/sugarshin', text: 'Instagram' },
+        { url: 'https://www.facebook.com/sngsato', text: 'Facebook' },
       ],
     }
   },

@@ -22,8 +22,8 @@
         Software Developer
       </span>
       at
-      <a href="https://about.mercari.com/en/" class="Container__Nowrap">
-        Mercari, Inc.
+      <a href="https://linecorp.com/en/" class="Container__Nowrap">
+        LINE Corporation
       </a>
     </div>
   </div>

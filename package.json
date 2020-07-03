@@ -47,6 +47,6 @@
     "stylus": "0.54.7",
     "stylus-loader": "3.0.2",
     "terser": "4.8.0",
-    "vue-jest": "3.0.5"
+    "vue-jest": "3.0.6"
   }
 }

@@ -48,7 +48,7 @@ export default Vue.extend({
   data() {
     return {
       informations: [
-        { icon: 'terminal', text: 'Software Engineer' },
+        { icon: 'terminal', text: 'Software Developer' },
         { icon: 'location', text: 'Tokyo, Japan' },
       ],
       links: [

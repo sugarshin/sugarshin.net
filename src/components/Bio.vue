@@ -19,7 +19,7 @@
         instance0, inc.
       </a>
       <span class="Container__Nowrap">
-        Software Developer
+        Software Engineer
       </span>
       at
       <a href="https://linecorp.com/en/" class="Container__Nowrap">

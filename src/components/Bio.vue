@@ -21,6 +21,10 @@
       <span class="Container__Nowrap">
         Software Engineer
       </span>
+      and
+      <span class="Container__Nowrap">
+        Engineering Manager
+      </span>
       at
       <a href="https://linecorp.com/en/" class="Container__Nowrap">
         LINE Corporation

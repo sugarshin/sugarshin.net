@@ -8,17 +8,6 @@
     </h1>
     <div class="Container__Descr">
       <span class="Container__Nowrap">
-        Software Developer
-      </span>
-      and
-      <span class="Container__Nowrap">
-        Co-Founder
-      </span>
-      at
-      <a href="https://ins0.jp/" class="Container__Nowrap">
-        instance0, inc.
-      </a>
-      <span class="Container__Nowrap">
         Software Engineer
       </span>
       and
@@ -26,8 +15,13 @@
         Engineering Manager
       </span>
       at
-      <a href="https://linecorp.com/en/" class="Container__Nowrap">
-        LINE Corporation
+      <a href="https://linecorp.com/en/" class="Container__Nowrap">LINE Corporation</a>,
+      <span class="Container__Nowrap">
+        Co-Founder
+      </span>
+      at
+      <a href="https://ins0.jp/" class="Container__Nowrap">
+        instance0, inc.
       </a>
     </div>
   </div>

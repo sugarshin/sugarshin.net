@@ -19,7 +19,7 @@
   "author": "Shingo Sato <shinsugar@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "nuxt": "2.12.2",
+    "nuxt": "2.15.8",
     "octicons": "8.4.2",
     "sanitize.css": "11.0.1"
   },
@@ -47,6 +47,6 @@
     "stylus": "0.54.8",
     "stylus-loader": "3.0.2",
     "terser": "5.2.1",
-    "vue-jest": "3.0.7"
+    "vue-jest": "4.0.1"
   }
 }

@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   test:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -27,7 +27,7 @@ jobs:
       - name: Test
         run: npm test
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -58,7 +58,7 @@ jobs:
           name: .nuxt
           path: .nuxt
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     needs: [test, build]
     steps:
       - uses: actions/checkout@v2

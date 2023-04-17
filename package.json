@@ -46,7 +46,7 @@
     "prettier": "2.0.5",
     "stylus": "0.54.8",
     "stylus-loader": "3.0.2",
-    "terser": "5.2.1",
+    "terser": "5.14.2",
     "vue-jest": "3.0.7"
   }
 }

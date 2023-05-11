@@ -14,11 +14,17 @@
         </li>
       </ul>
       <ul class="TopPage__Text__List TopPage__Text__LinksLog">
-        <li is="ListItem" class="TopPage__Text__Profile__Item" href="//blog.sugarshin.net/">
+        <li is="ListItem" class="TopPage__Text__Profile__Item" href="https://blog.sugarshin.net/">
           <span class="TopPage__Text__Profile__ListItem__IconContainer">
             <Octicon name="pencil" />
           </span>
           <span>Blog</span>
+        </li>
+        <li is="ListItem" class="TopPage__Text__Profile__Item" href="https://slides.sugarshin.net/">
+          <span class="TopPage__Text__Profile__ListItem__IconContainer">
+            <Octicon name="note" />
+          </span>
+          <span>Slides</span>
         </li>
       </ul>
       <ul class="TopPage__Text__List">

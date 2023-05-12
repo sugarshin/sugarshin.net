@@ -33,13 +33,9 @@
   flex-direction: column
   font-size: 1.8rem
   margin: 0 0 8%
-  @media screen and (min-width: 768px)
-    text-align: right
 .Container__Title__Username
   font-size: 1.4rem
 .Container__Descr
-  @media screen and (min-width: 768px)
-    text-align: right
   a
     color: #168eea
     text-decoration: none

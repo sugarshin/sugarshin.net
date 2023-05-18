@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sugarshin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sugarshin.net
+  * I am sugarshin (https://keybase.io/sugarshin) on keybase.
+  * I have a public key ASDtaZqhrrI8LXCz3XfQTASK37JNvjTm92pyiJA6yIKDtwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101d1296150b74a8213a5367780b9cbcb327173141da6055d865997fc644c79c81a0a",
+      "host": "keybase.io",
+      "kid": "0120ed699aa1aeb23c2d70b3dd77d04c048adfb24dbe34e6f76a7288903ac88283b70a",
+      "uid": "6dd3264d3abfb3baeeeed1dd4ac0a919",
+      "username": "sugarshin"
+    },
+    "merkle_root": {
+      "ctime": 1684453432,
+      "hash": "09a9232a4a1ce06a0363c80d5d48fd440d1ab170f39befb990ba8006d103fb460c1dc27db9d46fe69657b35b0329f282be3aef6447aeef4c52110d26511edebc",
+      "hash_meta": "de68af7ec63a6dd13e247bf24ba1fd30547b55fbef0635367e41ca39a45cf6b7",
+      "seqno": 24469172
+    },
+    "service": {
+      "entropy": "rE2uizoSWdSq+0TacwQrYLcA",
+      "hostname": "sugarshin.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.4"
+  },
+  "ctime": 1684453537,
+  "expire_in": 504576000,
+  "prev": "db7f64aa57148014e5396ed454f0c4d9dd79a062edfbc15bb6abcd6b82819ba2",
+  "seqno": 79,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7Wmaoa6yPC1ws9130EwEit+yTb405vdqcoiQOsiCg7cKp3BheWxvYWTESpcCT8Qg239kqlcUgBTlOW7UVPDE2d15oGLt+8FbtqvNa4KBm6LEIFBZAqC4OdSmx126/KWvJ0HwOAvjhmjezGrbzRjaOXlGAgHCo3NpZ8RAwfdy/JDhWZnzpTEyRBD12YXSuWdwYB+m2NYJZGqiH3S0huv9AIeSAj2ZTBs6U2y43JUMPNjyo89pEPRftFDhD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAnv3uMHaSGsmFgzB9FlP73cJGi7BmCDO0bY5hULn/Eyo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sugarshin
+
+==================================================================

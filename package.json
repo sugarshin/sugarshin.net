@@ -28,7 +28,7 @@
     "@nuxtjs/markdownit": "1.2.10",
     "@vue/test-utils": "1.0.5",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "10.1.0",
+    "@babel/eslint-parser": "7.11.0",
     "babel-jest": "26.3.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.11.0",

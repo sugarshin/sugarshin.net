@@ -15,7 +15,7 @@
         Engineering Manager
       </span>
       at
-      <a href="https://linecorp.com/en/" class="Container__Nowrap">LINE Corporation</a>,
+      <a href="https://www.lycorp.co.jp/en/" class="Container__Nowrap">LY Corporation</a>,
       <span class="Container__Nowrap">
         Co-Founder
       </span>

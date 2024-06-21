@@ -78,9 +78,3 @@ jobs:
           BRANCH: gh-pages
           GITHUB_SHA: ${{ github.sha }}
           BUILD: build
-      - name: Refresh screen capture
-        if: github.ref == 'refs/heads/master' && success()
-        run: |
-          curl -XGET "https://api.apiflash.com/v1/urltoimage?access_key=${APIFLASH_ACCESS_KEY}&url=https://sugarshin.net&width=854&height=505&format=png&fresh=true" -I
-        env:
-          APIFLASH_ACCESS_KEY: ${{ secrets.APIFLASH_ACCESS_KEY }}

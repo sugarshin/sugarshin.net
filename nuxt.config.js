@@ -19,7 +19,7 @@ module.exports = {
   loading: { color: '#323b43' },
   css: ['~/assets/css/lib.css', '~/assets/css/app.styl'],
   plugins: [],
-  modules: ['@nuxtjs/markdownit'],
+  modules: [],
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {

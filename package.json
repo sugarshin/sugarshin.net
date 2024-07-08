@@ -21,7 +21,7 @@
   "dependencies": {
     "nuxt": "2.12.2",
     "octicons": "8.4.2",
-    "sanitize.css": "11.0.1"
+    "sanitize.css": "13.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "2.0.2",

@@ -65,7 +65,7 @@ export default Vue.extend({
         { url: 'https://github.com/sugarshin/', text: 'GitHub' },
         { url: 'https://www.linkedin.com/in/shingosato/', text: 'LinkedIn' },
         { url: 'https://keybase.io/sugarshin', text: 'Keybase' },
-        { url: 'https://twitter.com/sugarshin/', text: 'Twitter' },
+        { url: 'https://x.com/sugarshin/', text: 'X' },
         { url: 'https://instagram.com/sugarshin', text: 'Instagram' },
         { url: 'https://www.facebook.com/sngsato', text: 'Facebook' },
         { url: 'https://www.strava.com/athletes/sugarshin', text: 'Strava' },

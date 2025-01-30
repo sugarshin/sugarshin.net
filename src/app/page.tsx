@@ -12,27 +12,18 @@ import {
 import { clsx } from 'clsx';
 import styles from './page.module.css';
 
-type Data = {
-  informations: { icon: string; text: string }[];
-  links: { url: string; text: string }[];
-};
+type ExternalLinks = { url: string; text: string }[];
 
-const data: Data = {
-  informations: [
-    { icon: 'terminal', text: 'Software Developer' },
-    { icon: 'location', text: 'Tokyo, Japan' },
-  ],
-  links: [
-    { url: 'https://github.com/sugarshin/', text: 'GitHub' },
-    { url: 'https://www.linkedin.com/in/shingosato/', text: 'LinkedIn' },
-    { url: 'https://keybase.io/sugarshin', text: 'Keybase' },
-    { url: 'https://x.com/sugarshin/', text: 'X' },
-    { url: 'https://instagram.com/sugarshin', text: 'Instagram' },
-    { url: 'https://www.facebook.com/sngsato', text: 'Facebook' },
-    { url: 'https://www.strava.com/athletes/sugarshin', text: 'Strava' },
-    { url: 'https://sauna-ikitai.com/saunners/66527', text: 'サウナイキタイ' },
-  ],
-};
+const externalLinks: ExternalLinks = [
+  { text: 'GitHub', url: 'https://github.com/sugarshin/' },
+  { text: 'LinkedIn', url: 'https://www.linkedin.com/in/shingosato/' },
+  { text: 'Keybase', url: 'https://keybase.io/sugarshin' },
+  { text: 'X', url: 'https://x.com/sugarshin/' },
+  { text: 'Instagram', url: 'https://instagram.com/sugarshin' },
+  { text: 'Facebook', url: 'https://www.facebook.com/sngsato' },
+  { text: 'Strava', url: 'https://www.strava.com/athletes/sugarshin' },
+  { text: 'サウナイキタイ', url: 'https://sauna-ikitai.com/saunners/66527' },
+];
 
 export default function IndexPage() {
   return (
@@ -55,17 +46,22 @@ export default function IndexPage() {
               styles.toppage_text_profile,
             )}
           >
-            {data.informations.map((info, i) => (
-              <ListItem key={`info-${i}`}>
-                <span
-                  className={styles.toppage_text_profile_listitem_iconcontainer}
-                >
-                  {info.icon === 'terminal' && <TerminalIcon />}
-                  {info.icon === 'location' && <LocationIcon />}
-                </span>
-                <span>{info.text}</span>
-              </ListItem>
-            ))}
+            <ListItem>
+              <span
+                className={styles.toppage_text_profile_listitem_iconcontainer}
+              >
+                <TerminalIcon />
+              </span>
+              <span>Software Developer</span>
+            </ListItem>
+            <ListItem>
+              <span
+                className={styles.toppage_text_profile_listitem_iconcontainer}
+              >
+                <LocationIcon />
+              </span>
+              <span>Tokyo, Japan</span>
+            </ListItem>
           </ul>
           <ul
             className={clsx(
@@ -91,7 +87,7 @@ export default function IndexPage() {
             </ListItem>
           </ul>
           <ul className={styles.toppage_text_list}>
-            {data.links.map((link, i) => (
+            {externalLinks.map((link, i) => (
               <ListItem key={`link-${i}`} href={link.url}>
                 <span
                   className={styles.toppage_text_profile_listitem_iconcontainer}

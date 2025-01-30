@@ -1,7 +1,5 @@
 'use client';
 
-import Bio from '@/components/bio';
-import ListItem from '@/components/list-item';
 import {
   LinkExternalIcon,
   LocationIcon,
@@ -10,6 +8,8 @@ import {
   TerminalIcon,
 } from '@primer/octicons-react';
 import { clsx } from 'clsx';
+import Bio from '~/components/bio';
+import ListItem from '~/components/list-item';
 import styles from './page.module.css';
 
 type ExternalLinks = { url: string; text: string }[];

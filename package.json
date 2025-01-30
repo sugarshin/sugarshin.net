@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
     "format": "biome format",
     "lint": "biome lint",
     "check": "biome check"

@@ -1,8 +1,10 @@
 .title {
-  display: flex;
-  flex-direction: column;
   font-size: 1.8rem;
   margin: 0 0 8%;
+}
+
+.name {
+  margin-right: 0.5rem;
 }
 
 .username {

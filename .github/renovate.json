@@ -1,6 +1,3 @@
 {
-  "extends": [
-    "config:best-practices",
-    "config:js-app"
-  ]
+  "extends": ["config:best-practices", "config:js-app"]
 }

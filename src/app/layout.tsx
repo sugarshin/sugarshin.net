@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import "sanitize.css/sanitize.css";
-import "./globals.css";
+import type { Metadata } from 'next';
+import 'sanitize.css/sanitize.css';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Shingo Sato @sugarshin | sugarshin.net",
-  description: "Shingo Sato @sugarshin | Software Developer based in Tokyo",
+  title: 'Shingo Sato @sugarshin | sugarshin.net',
+  description: 'Shingo Sato @sugarshin | Software Developer based in Tokyo',
 };
 
 export default function RootLayout({
@@ -14,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,15 +1,21 @@
 'use client';
 
-import { clsx } from "clsx";
-import { PencilIcon, NoteIcon, TerminalIcon, LocationIcon, LinkExternalIcon } from '@primer/octicons-react'
-import Bio from "@/components/bio";
-import ListItem from "@/components/list-item";
-import styles from "./page.module.css";
+import Bio from '@/components/bio';
+import ListItem from '@/components/list-item';
+import {
+  LinkExternalIcon,
+  LocationIcon,
+  NoteIcon,
+  PencilIcon,
+  TerminalIcon,
+} from '@primer/octicons-react';
+import { clsx } from 'clsx';
+import styles from './page.module.css';
 
 type Data = {
   informations: { icon: string; text: string }[];
   links: { url: string; text: string }[];
-}
+};
 
 const data: Data = {
   informations: [
@@ -25,8 +31,8 @@ const data: Data = {
     { url: 'https://www.facebook.com/sngsato', text: 'Facebook' },
     { url: 'https://www.strava.com/athletes/sugarshin', text: 'Strava' },
     { url: 'https://sauna-ikitai.com/saunners/66527', text: 'サウナイキタイ' },
-  ],  
-}
+  ],
+};
 
 export default function IndexPage() {
   return (
@@ -43,10 +49,17 @@ export default function IndexPage() {
         </div>
         <div className={styles.toppage_text}>
           <Bio className={styles.toppage_text_bio} />
-          <ul className={clsx(styles.toppage_text_list, styles.toppage_text_profile)}>
+          <ul
+            className={clsx(
+              styles.toppage_text_list,
+              styles.toppage_text_profile,
+            )}
+          >
             {data.informations.map((info, i) => (
               <ListItem key={`info-${i}`}>
-                <span className={styles.toppage_text_profile_listitem_iconcontainer}>
+                <span
+                  className={styles.toppage_text_profile_listitem_iconcontainer}
+                >
                   {info.icon === 'terminal' && <TerminalIcon />}
                   {info.icon === 'location' && <LocationIcon />}
                 </span>
@@ -54,15 +67,24 @@ export default function IndexPage() {
               </ListItem>
             ))}
           </ul>
-          <ul className={clsx(styles.toppage_text_list, styles.toppage_text_linkslog)}>
+          <ul
+            className={clsx(
+              styles.toppage_text_list,
+              styles.toppage_text_linkslog,
+            )}
+          >
             <ListItem href="https://blog.sugarshin.net/">
-              <span className={styles.toppage_text_profile_listitem_iconcontainer}>
+              <span
+                className={styles.toppage_text_profile_listitem_iconcontainer}
+              >
                 <PencilIcon />
               </span>
               <span>Blog</span>
             </ListItem>
             <ListItem href="https://slides.sugarshin.net/">
-              <span className={styles.toppage_text_profile_listitem_iconcontainer}>
+              <span
+                className={styles.toppage_text_profile_listitem_iconcontainer}
+              >
                 <NoteIcon />
               </span>
               <span>Slides</span>
@@ -71,7 +93,9 @@ export default function IndexPage() {
           <ul className={styles.toppage_text_list}>
             {data.links.map((link, i) => (
               <ListItem key={`link-${i}`} href={link.url}>
-                <span className={styles.toppage_text_profile_listitem_iconcontainer}>
+                <span
+                  className={styles.toppage_text_profile_listitem_iconcontainer}
+                >
                   <LinkExternalIcon />
                 </span>
                 <span>{link.text}</span>

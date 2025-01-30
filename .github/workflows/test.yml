@@ -13,7 +13,9 @@ jobs:
       - name: Setup Biome
         uses: biomejs/setup-biome@c016c38f26f2c4a6eb3662679143614a254263fd # v2
         with:
-          version: 1.9.4
+          version: ${{ env.BIOME_VERSION }}
+        env:
+          BIOME_VERSION: 1.9.4
       - run: biome ci
   build:
     uses: ./.github/workflows/build.yml

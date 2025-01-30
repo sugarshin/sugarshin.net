@@ -19,5 +19,8 @@ node_modules/
 .env
 
 build
-.nuxt
+dist
+.output
+.next
 .deploy
+next-env.d.ts

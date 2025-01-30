@@ -1,7 +1,7 @@
 'use client';
 
 import {
-  LinkExternalIcon,
+  LinkIcon,
   LocationIcon,
   NoteIcon,
   PencilIcon,
@@ -92,7 +92,7 @@ export default function IndexPage() {
                 <span
                   className={styles.toppage_text_profile_listitem_iconcontainer}
                 >
-                  <LinkExternalIcon />
+                  <LinkIcon />
                 </span>
                 <span>{link.text}</span>
               </ListItem>

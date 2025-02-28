@@ -15,7 +15,11 @@ export default function Bio({ className }: Props) {
       <div className={styles.descr}>
         <span className={styles.nowrap}>Software Engineer</span> and{' '}
         <span className={styles.nowrap}>Engineering Manager</span> at{' '}
-        <a href="https://about.dinii.jp/" className={styles.nowrap}>
+        <a
+          href="https://about.dinii.jp/"
+          className={styles.nowrap}
+          target="_blank"
+        >
           Dinii Inc.
         </a>
       </div>

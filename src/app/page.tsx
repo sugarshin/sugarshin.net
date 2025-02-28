@@ -88,7 +88,7 @@ export default function IndexPage() {
           </ul>
           <ul className={styles.toppage_text_list}>
             {externalLinks.map((link, i) => (
-              <ListItem key={`link-${i}`} href={link.url}>
+              <ListItem key={`link-${i}`} href={link.url} target="_blank">
                 <span
                   className={styles.toppage_text_profile_listitem_iconcontainer}
                 >

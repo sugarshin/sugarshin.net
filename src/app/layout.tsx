@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import 'sanitize.css/sanitize.css';
 import './globals.css';
+import ThemeController from '~/components/theme-controller';
 
 export const metadata: Metadata = {
   title: 'Shingo Sato @sugarshin | sugarshin.net',
@@ -15,6 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
+      <Suspense>
+        <ThemeController />
+      </Suspense>
     </html>
   );
 }

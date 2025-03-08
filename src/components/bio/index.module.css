@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.name {
+  margin-right: 0.5rem;
+}
+
 .username {
   font-size: 1.4rem;
 }

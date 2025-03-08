@@ -10,6 +10,7 @@ import {
 import { clsx } from 'clsx';
 import Bio from '~/components/bio';
 import ListItem from '~/components/list-item';
+import ThemeSwitcher from '~/components/theme-switcher';
 import styles from './page.module.css';
 
 type ExternalLinks = { url: string; text: string }[];
@@ -32,7 +33,7 @@ export default function IndexPage() {
         <div className={styles.toppage_image}>
           <div className={styles.toppage_image_container}>
             <img
-              src="/images/portrait.png"
+              src="/images/s-t.png"
               className={styles.toppage_image_container_img}
               alt="Shingo Sato's Portrait"
             />
@@ -98,6 +99,9 @@ export default function IndexPage() {
               </ListItem>
             ))}
           </ul>
+        </div>
+        <div className={styles.footer_container}>
+          <ThemeSwitcher />
         </div>
       </div>
     </div>

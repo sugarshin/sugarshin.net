@@ -1,0 +1,34 @@
+.button {
+  padding: .5rem 1rem;
+  appearance: none;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  border: 1px solid;
+  border-radius: 1rem;
+}
+
+.button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+}
+
+.button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
+}
+
+.button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.active {
+  background: var(--text-color);
+  border-radius: 8px;
+  color: var(--background-color);
+  border-color: var(--text-color);
+}

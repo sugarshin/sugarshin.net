@@ -34,6 +34,14 @@
   margin: 0;
 }
 
+.toppage_text_profile {
+  margin-bottom: 16px;
+}
+
+.toppage_text_linkslog {
+  margin-bottom: 16px;
+}
+
 .toppage_text_profile_listitem_iconcontainer {
   margin-right: .4em;
   display: inline-block;

@@ -10,5 +10,23 @@
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "cli/v(?<version>.*)$"
     }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["patch"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "All patch dependencies excluded \"typescript\"",
+      "groupSlug": "all-patch-deps-excluded-typescript",
+      "matchPackageNames": ["*", "!typescript"]
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "All patch and minor dev dependencies",
+      "groupSlug": "all-patch-minor-dev-deps",
+      "matchPackageNames": ["*"]
+    }
   ]
 }

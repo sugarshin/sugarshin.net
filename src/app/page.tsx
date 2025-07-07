@@ -5,6 +5,7 @@ import {
   LocationIcon,
   NoteIcon,
   PencilIcon,
+  PersonIcon,
   TerminalIcon,
 } from '@primer/octicons-react';
 import { clsx } from 'clsx';
@@ -70,6 +71,14 @@ export default function IndexPage() {
               styles.toppage_text_linkslog,
             )}
           >
+            <ListItem href="https://github.com/sugarshin/sugarshin/blob/main/RESUME.md">
+              <span
+                className={styles.toppage_text_profile_listitem_iconcontainer}
+              >
+                <PersonIcon />
+              </span>
+              <span>Resume</span>
+            </ListItem>
             <ListItem href="https://blog.sugarshin.net/">
               <span
                 className={styles.toppage_text_profile_listitem_iconcontainer}

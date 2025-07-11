@@ -23,10 +23,10 @@
     "typescript": "5.8.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
-    "@types/node": "22.16.0",
+    "@biomejs/biome": "2.1.1",
+    "@types/node": "22.16.3",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
-    "lefthook": "1.11.16"
+    "lefthook": "1.12.2"
   }
 }

@@ -18,7 +18,7 @@ jobs:
         with:
           version: ${{ env.BIOME_VERSION }}
         env:
-          BIOME_VERSION: 2.3.7
+          BIOME_VERSION: 2.3.8
       - run: biome ci
   build:
     uses: ./.github/workflows/build.yml

@@ -14,7 +14,7 @@
   "author": "Shingo Sato <shinsugar@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "@primer/octicons-react": "19.21.2",
+    "@primer/octicons-react": "19.22.0",
     "clsx": "2.1.1",
     "next": "16.1.6",
     "react": "19.2.4",

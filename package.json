@@ -27,6 +27,6 @@
     "@types/node": "24.19.1",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "lefthook": "2.1.16"
+    "lefthook": "2.1.17"
   }
 }
